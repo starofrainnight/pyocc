@@ -4,13 +4,43 @@
 """Console script for pyocc."""
 
 import click
+from pyocc import PyOCC
 
-@click.command()
-def main(args=None):
-    """Console script for pyocc."""
-    click.echo("Replace this message by putting your code into "
-               "pyocc.__main__.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+
+@click.group()
+@click.pass_context
+def main(ctx):
+    """PyOCC command line program. Use for demonstrate how to use PyOCC
+    library."""
+    ctx.obj = PyOCC()
+
+
+@main.group()
+@click.pass_context
+def show(ctx):
+    """Display details about how to invoke PyOCC.
+    """
+    pass
+
+
+@show.command()
+@click.pass_context
+def configs(ctx):
+    """Display configs we supported
+    """
+    occ = ctx.obj
+
+    click.echo(list(occ.configs))
+
+
+@show.command()
+@click.pass_context
+def executable(ctx):
+    """Display executable we found
+    """
+    occ = ctx.obj
+
+    click.echo(occ.executable)
 
 
 if __name__ == "__main__":
