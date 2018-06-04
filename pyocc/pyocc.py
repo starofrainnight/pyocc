@@ -6,9 +6,10 @@ import os
 import sys
 import glob
 import subprocess
+from whichcraft import which
+
 if sys.platform.startswith('win32'):
     import openccbinary as occbin
-from whichcraft import which
 
 
 class PyOCC(object):
@@ -28,7 +29,7 @@ class PyOCC(object):
         if glob.glob(os.path.join(cfg_dir, '*.ocd')):
             return cfg_dir
 
-        raise FileNotFound("Can't find any opencc configuration files!")
+        raise FileNotFoundError("Can't find any opencc configuration files!")
 
     def __init__(self, executable=None):
         """Initialize OpenCC object

@@ -2,8 +2,8 @@
 
 """Top-level package for pyocc."""
 
+from .pyocc import PyOCC  # noqa
+
 __author__ = """Hong-She Liang"""
 __email__ = 'starofrainnight@gmail.com'
 __version__ = '0.0.1'
-
-from .pyocc import PyOCC
