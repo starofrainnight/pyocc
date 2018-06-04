@@ -22,13 +22,13 @@ script: tox
 
 # After you create the Github repo and add it to Travis, run the
 # travis_pypi_setup.py script to finish PyPI deployment setup
-# deploy:
-#   provider: pypi
-#   distributions: sdist bdist_wheel
-#   user: starofrainnight
-#   password:
-#     secure: PLEASE_REPLACE_ME
-#   on:
-#     tags: true
-#     repo: starofrainnight/pyocc
-#     python: 3.6
+deploy:
+  provider: pypi
+  distributions: bdist_wheel
+  user: starofrainnight
+  password:
+    secure: "ujig7nzv2kEBruQqoSGJmqaGA7hloA4GgraLTsGOD6r6fLTr8+0ncUZYXhSr3QX90Btduy82g8CW/55PlOmnD4xGVDftbxnaDaYhd4ZsUTVvr2TqIDT1lqLqa15apuT7BWlM+s1rsFylJiPkWm4m5w4lZh6ViTU7zxsXLQily8X5ZvchU2s6t9Wp80MSby4uDJS97wm4dV3usoG7nuEXQnxNrzo9IWenU9soK/STd2p7CbdPIcxclxIQZFG9z8ymXgHx9/HBG0Hactx+tQZ6rsqERrJWYr/yb7XYpm25DTnbDtPEu9hRel/4CgKGPPPNGu6Ld/JRAK/JFdV2cfs3A0izitK7Mma4oBZ5MIpxfEorZpFHEIr3TK7EuK6o/szhdt66EJ+g0VPfizwUYR/t+P5pjiwLc2FcBSGbbxZ3Fd4kY1ffRiSsicEevAc9CtDWsWtTkg9Z0BSuDeZ1t6vbY17Yxwj8tdALl8VEa4UAtQTFk7iMn3zSYxV6aI7Xsw2zRgCblm6594Bw5QeZtIzpQUPLeGnWTVivA1oRoJTm6Ln+D0GqpQMVFbqPz3vS2zAp3M/OrBEiHuijEluqufIYp+CGJgpa2q1vyGOeZao/7ZDAccrNxyTehslNhHKWUoHiTfttKPZnn58Gl/Y+nVqiVPfRgjyuBq5XamT84ElaCGk="
+  on:
+    tags: true
+    repo: starofrainnight/pyocc
+    python: 3.6
