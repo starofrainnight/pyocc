@@ -10,8 +10,10 @@ with open('README.rst') as readme_file, open('HISTORY.rst') as history_file:
 
 install_requires = [
     'click>=6.0',
-    'openccbinary',
 ]
+
+if sys.platform.startswith('win32'):
+    install_requires.append('openccbinary')
 
 setup_requires = [
     'pytest-runner',

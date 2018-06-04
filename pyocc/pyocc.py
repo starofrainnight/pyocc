@@ -6,7 +6,8 @@ import os
 import sys
 import glob
 import subprocess
-import openccbinary as occbin
+if sys.platform.startswith('win32'):
+    import openccbinary as occbin
 from whichcraft import which
 
 
