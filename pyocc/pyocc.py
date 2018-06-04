@@ -101,6 +101,10 @@ class PyOCC(object):
         return config_name
 
     @property
+    def executable(self):
+        return self._executable
+
+    @property
     def configs(self):
         """Get supported config names
 
