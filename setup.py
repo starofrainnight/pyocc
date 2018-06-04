@@ -29,7 +29,7 @@ tests_requires = [
 
 setup(
     name='pyocc',
-    version='0.0.2',
+    version='0.0.3',
     description="A wrapper for OpenCC (The Chinese convert solution)",
     long_description=long_description,
     author="Hong-She Liang",
