@@ -11,6 +11,7 @@ with open('README.rst') as readme_file, open('HISTORY.rst') as history_file:
 
 install_requires = [
     'click>=6.0',
+    'whichcraft',
 ]
 
 if sys.platform.startswith('win32'):
