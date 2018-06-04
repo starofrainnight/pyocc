@@ -46,7 +46,8 @@ class PyOCC(object):
 
         if not which(executable):
             raise FileNotFoundError(executable)
-        print(executable)
+
+        self._executable = executable
         self._cfg_dir = self._guess_cfg_dir(executable)
         self._cfgs = None
 
